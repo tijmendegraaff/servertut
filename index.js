@@ -19,6 +19,7 @@ passport.use(
   )
 );
 
+// setup google Auth route
 app.get(
   "/auth/google",
   passport.authenticate("google", {
