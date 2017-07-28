@@ -11,7 +11,8 @@ module.exports = app => {
 
   // setup Auth callback route
   app.get("/auth/google/callback", passport.authenticate("google"));
-  // logout user
+
+  // logout User
   app.get("/api/logout", (req, res) => {
     req.logout();
     res.send(req.user);
