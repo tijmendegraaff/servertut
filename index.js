@@ -12,8 +12,10 @@ passport.use(
       clientSecret: keys.googleClientSecret,
       callbackURL: "/auth/google/callback"
     },
-    accesToken => {
-      console.log(accesToken);
+    (accesToken, refreshToken, profile, done) => {
+      console.log("acces token", accesToken);
+      console.log("refresh token", refreshToken);
+      console.log("profile", profile);
     }
   )
 );
@@ -26,7 +28,7 @@ app.get(
   })
 );
 
-// setup auth callback route
+// setup Auth callback route
 app.get("/auth/google/callback", passport.authenticate("google"));
 
 // server Config
