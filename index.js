@@ -27,6 +27,7 @@ app.use(passport.session());
 
 // import routes
 require("./routes/authRoutes")(app);
+require("./routes/billingRoutes")(app);
 
 // server Config
 const PORT = process.env.PORT || 5000;
