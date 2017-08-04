@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cookieSession = require("cookie-session");
+const bodyParser = require("body-parser");
 const passport = require("passport");
 const keys = require("./config/keys");
 // need to define model first!!!
@@ -12,6 +13,8 @@ mongoose.connect(keys.mongoURI);
 
 // Initialize server
 const app = express();
+
+app.use(bodyParser.json());
 
 // declare use of cookies
 app.use(
