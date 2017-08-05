@@ -6,6 +6,7 @@ const passport = require("passport");
 const keys = require("./config/keys");
 // need to define model first!!!
 require("./models/User");
+require("./models/Survey");
 require("./services/passport");
 
 // connect to remote mongoDB database
