@@ -19,6 +19,6 @@ module.exports = app => {
       date: Date.now()
     });
     // send email
-    const mailer = new Mailer(survey, template);
+    const mailer = new Mailer(survey, surveyTemplate(survey));
   });
 };
