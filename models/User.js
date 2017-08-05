@@ -4,7 +4,7 @@ const { Schema } = mongoose; // const Schema = mongoose.Schema; is the same in E
 const userSchema = new Schema({
   googleId: String,
   credits: {
-    type: number,
+    type: Number,
     default: 0
   }
 });
