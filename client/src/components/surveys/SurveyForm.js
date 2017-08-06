@@ -1,4 +1,4 @@
-// SurveyForm shows a form for a suer to add input
+// SurveyForm shows a form for a user to add input
 import _ from "lodash";
 import React, { Component } from "react";
 import { reduxForm, Field } from "redux-form";
@@ -43,7 +43,7 @@ class SurveyForm extends Component {
 function validate(values) {
   const errors = {};
 
-  errors.emails = validateEmails(values.emails || "");
+  errors.recipients = validateEmails(values.recipients || "");
 
   _.each(formFields, ({ name }) => {
     if (!values[name]) {
